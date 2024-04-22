@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  my-flask-app:
+    build: .
+    image: northamerica-northeast1-docker.pkg.dev/websitecustom-17313/dashboard/myflaskapp:v3
+    env_file:
+      - .env
+    volumes:
+      - .:/usr/src/app
+    ports:
+      - "5000:5000"
